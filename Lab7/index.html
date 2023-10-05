@@ -59,17 +59,36 @@
   // Give your layer's source a nickname you'll remember easily. I've called my source `sandy_layer`.
   map.addSource('sandy_layer',{
     'type':'vector',
-    'url': 'mapbox://xrb2.53ell7nx'
+    'url': 'mapbox://xrb2.b9tl78xt'
   });
   // add a new layer with your polygons
   map.addLayer({
     'id':'flood_zones',
     'type':'fill',
     'source':'sandy_layer',
-    'source-layer':'Sandy_Inundation_Zone-0trvw2',
+    'source-layer':'Sandy_Inundation_Zone-1hv444',
     'paint':{
       'fill-color':'#00158f',
       'fill-opacity': 0.5
+    }
+  })
+});
+
+    map.on('load',function(){
+  // Give your layer's source a nickname you'll remember easily. I've called my source `NYCHA_Development`.
+  map.addSource('NYCHA_layer',{
+    'type':'vector',
+    'url': 'mapbox://xrb2.50p981nt',
+  });
+  // add a new layer with your polygons
+  map.addLayer({
+    'id':'NYCHA',
+    'type':'fill',
+    'source':'NYCHA_layer',
+    'source-layer':'Map_of_NYCHA_Developments-450q82',
+    'paint':{
+      'fill-color':'#00158f',
+      'fill-opacity': 0.75
     }
   })
 });
