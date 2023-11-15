@@ -73,7 +73,7 @@ body {
   margin-bottom: 5px;
 }
 
-#color-box{
+.color-box{
   display: inline-block;
   width: 10px;
   height: 10px;

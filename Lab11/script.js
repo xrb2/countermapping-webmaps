@@ -24,8 +24,8 @@ map.addLayer({
         'source-layer':'Historical_Restaurant_Scores_-bkwvm8',
         'paint':{
         	'circle-color': [
-      			'step',
-      			['get', 'inspection_score'],
+      			'step',['to-number',
+      			['get', 'inspection_score']],
       			  '#808080',
 			      45, '#440154',
 			      80, '#3b528b',
