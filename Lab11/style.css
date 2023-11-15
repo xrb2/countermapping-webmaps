@@ -49,3 +49,32 @@ body {
   margin-right:3%;
   margin-left:3%;
 }
+
+#legend{
+  position: fixed;
+  top: 40%;
+  width: 20%;
+  left: 78%;
+  margin-right:3%;
+  margin-left:3%;
+}
+
+#legendtitle{
+  position: fixed;
+  top: 35%;
+  width: 20%;
+  left: 78%;
+  margin-right:3%;
+  margin-left:3%;
+}
+
+.legend-item {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#color-box{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}

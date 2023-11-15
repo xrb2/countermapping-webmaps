@@ -23,11 +23,35 @@ map.addLayer({
         'source':'restaurantSource',
         'source-layer':'Historical_Restaurant_Scores_-bkwvm8',
         'paint':{
-          'circle-color':'#00158f'
-      }
+        	'circle-color': [
+      			'step',
+      			['get', 'inspection_score'],
+      			  '#808080',
+			      45, '#440154',
+			      80, '#3b528b',
+			      85, '#21908d',
+			      90, '#5dc963',
+			      95, '#fde725'
+    ]}
+      //{ 'range': '45 - 80', 'circle-color': '#440154' },
+      //{ 'range': '80 - 85', 'circle-color': '#3b528b' },
+      //{ 'range': '85 - 90', 'circle-color': '#21908d' },
+      //{ 'range': '90 - 95', 'circle-color': '#5dc963' },
+      //{ 'range': '95 - 100', 'circle-color': '#fde725' },]
+        	// 'fill-color':[
+  //'step',
+  //['get','AMR5E002'],
+ // '#440154',45-80,'#3b528b',80-85,'#21908d',85-90,'#5dc963',90-95,'#fde725',95-100,'#808080',
+ // ]
+          //'circle-color':'#440154', range: 45 - 80,
+          //'circle-color':'#3b528b', 80 - 85,
+          //'circle-color':'#21908d', 85 - 90,
+          //'circle-color':'#5dc963', 90 - 95,
+          //'circle-color':'#fde725', 95 - 100,
+      
   });
 
-map.on('mouseenter', 'inspections', (e) => {
+map.on('mouseenter', 'restaurantLayer', (e) => {
         //console.log(e.features[0]['properties']['business_name']);
         var name = (e.features[0]['properties']['business_name']);
         var textField = document.getElementById('restname');
